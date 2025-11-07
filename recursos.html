@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA + Gamificación | Recursos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">IA <span>+ Gamificación</span></a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="main-nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="propuesta.html">Nuestra propuesta</a></li>
+          <li><a class="active" href="recursos.html">Recursos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h1>Recursos educativos con IA</h1>
+    <p>Este sitio reúne recursos educativos creados por nosotros con apoyo de IA, especialmente diseñados para docentes interesados en innovar sus prácticas.</p>
+
+    <div class="grid-cards">
+      <!-- Reemplazar # por los enlaces reales -->
+      <article class="card resource">
+        <i class="fa-solid fa-file-lines"></i>
+        <h3>Texto generado con IA</h3>
+        <p>Explicaciones claras y personalizadas.</p>
+        <a class="btn btn-primary" href="#">Ver recurso</a>
+      </article>
+
+      <article class="card resource">
+        <i class="fa-solid fa-podcast"></i>
+        <h3>Podcast</h3>
+        <p>Audio educativo para docentes y familias.</p>
+        <a class="btn btn-primary" href="#">Escuchar</a>
+      </article>
+
+      <article class="card resource">
+        <i class="fa-solid fa-video"></i>
+        <h3>Video</h3>
+        <p>Micro‑videos IA para el aula.</p>
+        <a class="btn btn-primary" href="#">Ver video</a>
+      </article>
+
+      <article class="card resource">
+        <i class="fa-solid fa-clapperboard"></i>
+        <h3>Animación IA</h3>
+        <p>Animaciones breves para introducir conceptos.</p>
+        <a class="btn btn-primary" href="#">Ver animación</a>
+      </article>
+
+      <article class="card resource">
+        <i class="fa-solid fa-robot"></i>
+        <h3>Chatbot</h3>
+        <p>Asistente para preguntas frecuentes del sitio.</p>
+        <a class="btn btn-primary" href="#" id="openChatbotLink">Probar</a>
+      </article>
+
+      <article class="card resource">
+        <i class="fa-solid fa-gamepad"></i>
+        <h3>Juegos y mini‑desafíos</h3>
+        <p>Actividades lúdicas listas para usar.</p>
+        <a class="btn btn-primary" href="#">Abrir</a>
+      </article>
+
+      <article class="card resource">
+        <i class="fa-solid fa-puzzle-piece"></i>
+        <h3>Actividades gamificadas</h3>
+        <p>Secuencias adaptables a diferentes grados.</p>
+        <a class="btn btn-primary" href="#">Ver actividades</a>
+      </article>
+
+      <article class="card resource">
+        <i class="fa-solid fa-book"></i>
+        <h3>Material teórico</h3>
+        <p>IA, gamificación, TPACK, SAMR y más.</p>
+        <a class="btn btn-primary" href="#">Leer</a>
+      </article>
+
+      <article class="card resource">
+        <i class="fa-solid fa-person-chalkboard"></i>
+        <h3>Tutoriales</h3>
+        <p>Guías paso a paso para implementar en clase.</p>
+        <a class="btn btn-primary" href="#">Ver guías</a>
+      </article>
+
+      <article class="card resource">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <h3>Herramientas digitales</h3>
+        <p>Selección para docentes y estudiantes.</p>
+        <a class="btn btn-primary" href="#">Explorar</a>
+      </article>
+
+      <article class="card resource">
+        <i class="fa-solid fa-image"></i>
+        <h3>Recursos visuales</h3>
+        <p>Imágenes y gráficos creados con IA.</p>
+        <a class="btn btn-primary" href="#">Ver recursos</a>
+      </article>
+
+      <article class="card resource">
+        <i class="fa-solid fa-school"></i>
+        <h3>Ejemplos reales</h3>
+        <p>Experiencias y casos en escuelas primarias.</p>
+        <a class="btn btn-primary" href="#">Conocer</a>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>UTN – LTE · Proyecto IA + Gamificación</p>
+      <a class="btn btn-outline" href="contacto.html"><i class="fa-solid fa-paper-plane"></i> Contacto</a>
+    </div>
+  </footer>
+
+  <!-- Modal Chatbot (compartido con index.html) -->
+  <div class="modal" id="chatbotModal" aria-hidden="true" role="dialog" aria-labelledby="chatbotTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="closeChatbot" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+      <h3 id="chatbotTitle">Asistente del sitio</h3>
+      <div id="chatLog" class="chat-log" aria-live="polite"></div>
+      <form id="chatForm" class="chat-form" autocomplete="off">
+        <input type="text" id="chatInput" placeholder="Escribe tu pregunta…" required />
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

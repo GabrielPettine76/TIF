@@ -1,0 +1,89 @@
+contacto.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA + Gamificación | Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">IA <span>+ Gamificación</span></a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="main-nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="propuesta.html">Nuestra propuesta</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a class="active" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h1>Contacto</h1>
+    <p>Escribinos para colaborar, proponer actividades o solicitar materiales.</p>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="form-row">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+        <small class="error" id="nameError"></small>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+        <small class="error" id="emailError"></small>
+      </div>
+      <div class="form-row">
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+        <small class="error" id="messageError"></small>
+      </div>
+      <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+      <p class="form-success" id="formSuccess" hidden>¡Gracias! Tu mensaje fue validado localmente. Configurá el envío real por email más adelante.</p>
+    </form>
+
+    <section class="contact-extras">
+      <h2>Redes y contacto directo</h2>
+      <ul class="social">
+        <li><a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="mailto:equipo@example.com"><i class="fa-solid fa-envelope"></i> equipo@example.com</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>UTN – LTE · Proyecto IA + Gamificación</p>
+      <button class="btn btn-chatbot" id="openChatbot"><i class="fa-solid fa-comments"></i> Chatbot</button>
+    </div>
+  </footer>
+
+  <!-- Modal Chatbot -->
+  <div class="modal" id="chatbotModal" aria-hidden="true" role="dialog" aria-labelledby="chatbotTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="closeChatbot" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+      <h3 id="chatbotTitle">Asistente del sitio</h3>
+      <div id="chatLog" class="chat-log" aria-live="polite"></div>
+      <form id="chatForm" class="chat-form" autocomplete="off">
+        <input type="text" id="chatInput" placeholder="Escribe tu pregunta…" required />
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

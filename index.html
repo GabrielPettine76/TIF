@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA + Gamificación en Primaria | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Zx+6Zr6..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="description" content="Proyecto educativo: IA y gamificación para potenciar el aprendizaje de Matemática en primaria." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">IA <span>+ Gamificación</span></a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="main-nav" aria-label="Principal">
+        <ul>
+          <li><a class="active" href="index.html">Inicio</a></li>
+          <li><a href="propuesta.html">Nuestra propuesta</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Innovación Educativa con IA y Gamificación</h1>
+          <p>
+            Bienvenidos a este espacio donde la Inteligencia Artificial y la gamificación se encuentran para transformar la enseñanza en la escuela primaria. Nuestro propósito es acercar a docentes, directivos y familias propuestas innovadoras que integren tecnología educativa de manera significativa, accesible y cercana a la realidad escolar.
+          </p>
+          <p>
+            En un contexto donde las infancias aprenden de manera cada vez más visual, interactiva y motivada por el juego, creemos firmemente que enseñar con herramientas tradicionales ya no es suficiente. La IA permite personalizar, adaptar y enriquecer las experiencias de aprendizaje, mientras que la gamificación aporta desafíos, recompensas y dinámicas lúdicas que incrementan la motivación y el compromiso de los estudiantes.
+          </p>
+          <ul class="checklist">
+            <li>✅ La <strong>IA</strong> ayuda a crear contenidos educativos dinámicos: explicaciones claras, material visual, ejercicios personalizados y recursos accesibles para distintos ritmos y estilos de aprendizaje.</li>
+            <li>✅ La <strong>gamificación</strong> convierte las clases en experiencias motivadoras: niveles, retos, insignias, colaboración entre pares y pensamiento crítico.</li>
+            <li>✅ La <strong>combinación</strong> de ambas potencia el aprendizaje, especialmente en áreas como Matemática, Ciencias, Lengua y Educación Digital.</li>
+          </ul>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="recursos.html"><i class="fa-solid fa-graduation-cap"></i> Ver recursos</a>
+            <a class="btn btn-outline" href="propuesta.html"><i class="fa-solid fa-lightbulb"></i> Nuestra propuesta</a>
+          </div>
+        </div>
+        <div class="hero-illu" aria-hidden="true">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div class="container grid-3">
+        <article class="card">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h3>Contenidos con IA</h3>
+          <p>Textos, imágenes, audio y video generados con herramientas de IA, listos para el aula.</p>
+        </article>
+        <article class="card">
+          <i class="fa-solid fa-gamepad"></i>
+          <h3>Dinámicas Lúdicas</h3>
+          <p>Mini‑juegos, niveles, insignias y desafíos que aumentan la motivación.</p>
+        </article>
+        <article class="card">
+          <i class="fa-solid fa-chalkboard-user"></i>
+          <h3>Guías Docentes</h3>
+          <p>Secuencias didácticas, tutoriales y herramientas para implementar en clase.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ethics">
+      <div class="container">
+        <h2>Uso responsable de la IA</h2>
+        <p>Transparencia, privacidad y créditos: cada recurso indica la herramienta utilizada y su autoría. Fomentamos un uso inclusivo, crítico y pedagógicamente fundamentado de la IA.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>UTN – Licenciatura en Tecnología Educativa · Proyecto IA + Gamificación</p>
+      <button class="btn btn-chatbot" id="openChatbot"><i class="fa-solid fa-comments"></i> Chatbot</button>
+    </div>
+  </footer>
+
+  <!-- Modal Chatbot -->
+  <div class="modal" id="chatbotModal" aria-hidden="true" role="dialog" aria-labelledby="chatbotTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="closeChatbot" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+      <h3 id="chatbotTitle">Asistente del sitio</h3>
+      <div id="chatLog" class="chat-log" aria-live="polite"></div>
+      <form id="chatForm" class="chat-form" autocomplete="off">
+        <input type="text" id="chatInput" placeholder="Escribe tu pregunta…" required />
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
