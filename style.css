@@ -141,3 +141,75 @@ input:focus, textarea:focus{outline:2px solid var(--aqua)}
   .main-nav ul{flex-direction:column}
   .grid-cards{grid-template-columns:1fr}
 }
+
+/* ===========================
+   MODAL DE TEXTO IA
+   =========================== */
+
+.modalIA {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(3px);
+}
+
+.modalIA-content {
+  background: var(--white);
+  width: 75%;
+  max-height: 85%;
+  margin: 3% auto;
+  padding: 30px;
+  border-radius: 16px;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+  font-family: 'Montserrat', sans-serif;
+  animation: fadeInModal .25s ease-out;
+}
+
+/* Animación sutil */
+@keyframes fadeInModal {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.modalIA-close {
+  float: right;
+  font-size: 30px;
+  border: none;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+}
+.modalIA-close:hover {
+  color: var(--red);
+}
+
+/* Contenido interno */
+.texto-completo {
+  margin-top: 25px;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #1b1b1b;
+}
+
+/* Tablas dentro del modal */
+.modalIA-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.modalIA-content th,
+.modalIA-content td {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+}
+
+.modalIA-content th {
+  background: var(--aqua);
+}
+
+
+
