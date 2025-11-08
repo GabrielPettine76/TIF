@@ -96,3 +96,32 @@ chatForm && chatForm.addEventListener('submit', (e)=>{
   setTimeout(()=> addMsg('bot', a), 400);
   chatInput.value = '';
 });
+// =========================
+// MODAL DE TEXTO IA
+// =========================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modalIA = document.getElementById('modalIA');
+  const openIA = document.getElementById('openIAmodal');
+  const closeIA = document.getElementById('closeIAmodal');
+
+  if (openIA) {
+    openIA.addEventListener('click', (e) => {
+      e.preventDefault();
+      modalIA.style.display = 'block';
+    });
+  }
+
+  if (closeIA) {
+    closeIA.addEventListener('click', () => {
+      modalIA.style.display = 'none';
+    });
+  }
+
+  window.onclick = function (e) {
+    if (e.target === modalIA) {
+      modalIA.style.display = 'none';
+    }
+  };
+});
+
